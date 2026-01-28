@@ -6,7 +6,7 @@ module.exports = {
     publicPath: "auto",
     uniqueName: "angular_app",
     scriptType: "text/javascript",
-    assetModuleFilename: 'images/[hash][ext][query]',
+    assetModuleFilename: "images/[hash][ext][query]",
   },
   optimization: {
     runtimeChunk: false,
@@ -27,10 +27,10 @@ module.exports = {
         AngularAppLoader: "./src/app/loader.ts",
       },
       shared: {
-        "@angular/core": { singleton: true },
-        "@angular/common": { singleton: true },
-        "@angular/router": { singleton: true },
-        "@angular/common/http": { singleton: true },
+        "@angular/core": { eager: true, singleton: true },
+        "@angular/common": { eager: true, singleton: true },
+        "@angular/router": { eager: true, singleton: true },
+        "@angular/common/http": { eager: true, singleton: true },
       },
     }),
   ],
